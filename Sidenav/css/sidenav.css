@@ -1,0 +1,51 @@
+
+/*Sidenav Css Here*/
+
+.sidenav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 100vh;
+	border-right: 1px solid #ddd;
+	background-color: #ddd;
+	transform: translateX(-100%);
+	transition: all 0.3s;
+}
+
+
+@media (min-width: 768px) {
+	.sidenav {
+	width: 50%;
+	}
+
+}
+
+@media (min-width: 992px) {
+	.sidenav {
+	width: 30%;
+	}
+
+}
+.close-nav {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.sidenav-show {
+	transform: translateX(0);
+}
+
+.sidenav-show::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+}
